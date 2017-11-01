@@ -1,19 +1,16 @@
 <template>
   	<div>
-    	<indexheader />
-  	</div>
+		<index-header/>
+	</div>
 </template>
 
 <script>
-
-  	import header from "./Header.vue";
-
-  	export default {
-    	components: {
-      		"indexheader": header
-    	}
-  	}
-  
+import header from "./Header.vue";
+export default {
+	components: {
+		"index-header":header
+	}
+}
 </script>
 
 <style scoped>
