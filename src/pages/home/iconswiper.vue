@@ -1,15 +1,17 @@
 <template>
-  	<swiper :options="swiperOption" ref="mySwiper">
-	    <swiper-slide v-for="page in pages">
-		    <div class="icon-container">
-		    	<div class="icon-wrapper" v-for="item in page">
-	    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
-	    			<p class="icon-title">{{item.title}}</p>
-	    		</div>
-		    </div>
-	    </swiper-slide>
-	    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
-	</swiper>
+	<div>
+		<swiper :options="swiperOption" ref="mySwiper">
+		    <swiper-slide v-for="page in pages">
+			    <div class="icon-container">
+			    	<div class="icon-wrapper" v-for="item in page">
+		    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
+		    			<p class="icon-title">{{item.title}}</p>
+		    		</div>
+			    </div>
+		    </swiper-slide>
+		    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
+		</swiper>
+	</div>
 </template>
 
 <script>
@@ -113,6 +115,7 @@ export default {
 <style scoped>
 	.icon-container{
 		overflow: hidden;
+		height: 2.88rem;
 		padding-bottom: .4rem;
 	}
 	.icon-wrapper{
@@ -122,8 +125,8 @@ export default {
 		float: left;
 	}
 	.icon-img{
-		width: .66rem;
 		display: block;
+		width: .66rem;
 		margin: 0 auto;
 	}
 	.icon-title{

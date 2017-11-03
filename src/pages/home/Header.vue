@@ -15,9 +15,8 @@
 
 <script>
 import "../../assets/font/iconfont.css";
-//哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-export default {
 
+export default {
 	data () {
 	    return {
 	      msg: 'header'
@@ -78,18 +77,18 @@ export default {
 	    color: #ccc;
 	}
 	.header-city{
-		line-height: 0.88rem;
 		padding: 0 .22rem;
+		line-height: 0.88rem;
 		color: #fff;
 	}
 	.downarrow{
 		position: absolute;
 		top: 40%;
 		right: 0.08rem;
+		width: 0;
+	    height: 0;
 		line-height: 0.88rem;
 		display: inline-block;
-	    width: 0;
-	    height: 0;
 	    border-left: 0.12rem solid transparent;
 	    border-right: 0.12rem solid transparent;
 	    border-top: 0.12rem solid #FFFFFF;
