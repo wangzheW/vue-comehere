@@ -1,6 +1,6 @@
 <template>
   	<swiper :options="swiperOption" ref="mySwiper">
-	    <swiper-slide v-for="item in swiperInfo">
+	    <swiper-slide v-for="(item, index) in swiperInfo" :key="index + '_imgswiper_item'">
 	    	<div class="img-wrapper">
 	    		<img class="swiper-img" :src="item.imgUrl" alt="来这儿门票">
 	    	</div>
