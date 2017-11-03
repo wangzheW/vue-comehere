@@ -1,15 +1,23 @@
 <template>
-  	<swiper :options="swiperOption" ref="mySwiper">
-	    <swiper-slide v-for="page in pages">
-		    <div class="icon-container">
-		    	<div class="icon-wrapper" v-for="item in page">
-	    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
-	    			<p class="icon-title">{{item.title}}</p>
-	    		</div>
-		    </div>
-	    </swiper-slide>
-	    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
-	</swiper>
+	<div>
+		<swiper :options="swiperOption" ref="mySwiper">
+		    <swiper-slide v-for="(page, index) in pages" :key="index + '_iconswiper_item'">
+			    <div class="icon-container">
+			    	<div class="icon-wrapper" v-for="item in page">
+		    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
+		    			<p class="icon-title">{{item.title}}</p>
+		    		</div>
+			    </div>
+		    </swiper-slide>
+		    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
+		</swiper>
+		<div class="recommend border-topbottom">
+	  		<div class="recommend-item" v-for="(item, index) in recommendInfo" :class="{' border-right': index == 0}">
+	  			{{item.title}}
+	  		</div>
+  		</div>
+	</div>
+  	
 </template>
 
 <script>
@@ -84,6 +92,15 @@ export default {
 				title:"全部",
 				link:""
 			}],
+			recommendInfo:[{
+				icon:"",
+				"title":"附近",
+				link:""
+			},{
+				icon:"",
+				"title":"5折泡温泉",
+				link:""
+			}],
 	        swiperOption: {
 		        autoplay: false,
 		        direction: 'horizontal',
@@ -113,6 +130,7 @@ export default {
 <style scoped>
 	.icon-container{
 		overflow: hidden;
+		height: 2.88rem;
 		padding-bottom: .4rem;
 	}
 	.icon-wrapper{
@@ -134,6 +152,14 @@ export default {
 	}
 	.icon-pagination{
 		bottom: .1rem;
+	}
+	.recommend{
+		display: flex;
+	}
+	.recommend-item{
+		flex: 1;
+		line-height: 1rem;
+		text-align: center;
 	}
 	
 </style>
