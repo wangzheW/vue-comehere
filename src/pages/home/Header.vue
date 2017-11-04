@@ -3,7 +3,9 @@
 	<header class="header">
 		<a class="header-left iconfont">&#xe6bc;</a>
 		<div class="header-title" >
-			<span class="single-line">输入城市/景点/游玩主题</span>			
+			<router-link to="/list">
+				<span class="single-line">输入城市/景点/游玩主题</span>	
+			</router-link>		
 		</div>
 		<div class="header-right" >
 			<span class="header-city">北京</span>
