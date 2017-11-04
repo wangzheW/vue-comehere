@@ -33,7 +33,6 @@
 <script>
 
 	import "../../assets/font/iconfont.css";
-
 	import imgLeft from "../../assets/imgs/index-prompt-left.jpg";
 	import imgRight from "../../assets/imgs/index-prompt-right.jpg";
 

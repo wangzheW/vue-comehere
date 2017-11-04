@@ -11,11 +11,11 @@
 		    </swiper-slide>
 		    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
 		</swiper>
-		<div class="recommend border-topbottom">
+		<!-- <div class="recommend border-topbottom">
 	  		<div class="recommend-item" v-for="(item, index) in recommends" :class="{' border-right': index == 0}">
 	  			{{item.title}}
 	  		</div>
-  		</div>
+  		</div> -->
 	</div>
   	
 </template>
@@ -50,7 +50,7 @@ export default {
 			return pages;
 		}
 	},
-	props:["icons", "recommends"]
+	props:["icons"]
 }
 </script>
 
