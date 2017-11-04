@@ -1,5 +1,4 @@
 <template>
-	
 	<header class="header">
 		<a class="header-left iconfont">&#xe6bc;</a>
 		<div class="header-title" >
@@ -10,11 +9,11 @@
 			<span class="downarrow"></span>			
 		</div>
 	</header>
-
 </template>
 
 <script>
 import "../../assets/font/iconfont.css";
+import "../../assets/center-font/iconfont.css";
 //哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
 export default {
 

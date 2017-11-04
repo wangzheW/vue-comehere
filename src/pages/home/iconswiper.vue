@@ -6,7 +6,19 @@
 	    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
 	    			<p class="icon-title">{{item.title}}</p>
 	    		</div>
+
 		    </div>
+
+	    </swiper-slide>
+	    <swiper-slide>
+		    <div class="icon-container">
+		    	<div class="icon-wrapper" v-for="item in swiperInfoTwo">
+	    			<img :src="item.imgUrl" alt="一日游" class="icon-img">
+	    			<p class="icon-title">{{item.title}}</p>
+	    		</div>
+
+		    </div>
+		    
 	    </swiper-slide>
 	    <div class="swiper-pagination icon-pagination"  slot="pagination"></div>
 	</swiper>
@@ -52,6 +64,39 @@ export default {
 				title:"泡温泉",
 				link:""
 			}],
+			swiperInfoTwo:[{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+				title:"城市观光",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+				title:"玻璃栈道",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/45/676b67d7078abc02.png",
+				title:"名胜古迹",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+				title:"周边游",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+				title:"自然风光",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/6d/ee9eb965690ce402.png",
+				title:"古北水镇",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+				title:"景点讲解",
+				link:""
+			},{
+				imgUrl:"http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+				title:"全部",
+				link:""
+			}],
 	        swiperOption: {
 		        autoplay: false,
 		        direction: 'horizontal',
@@ -69,6 +114,7 @@ export default {
 	.icon-container{
 		overflow: hidden;
 		padding-bottom: .4rem;
+		background: #fff;
 	}
 	.icon-wrapper{
 		overflow: hidden;
