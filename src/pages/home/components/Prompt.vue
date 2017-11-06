@@ -32,12 +32,13 @@
 
 <script>
 
-	import "../../assets/font/iconfont.css";
+	import "../../../assets/font/iconfont.css";
 
-	import imgLeft from "../../assets/imgs/index-prompt-left.jpg";
-	import imgRight from "../../assets/imgs/index-prompt-right.jpg";
+	import imgLeft from "../../../assets/imgs/index-prompt-left.jpg";
+	import imgRight from "../../../assets/imgs/index-prompt-right.jpg";
 
 	export default{
+		//props: ['PromptBottomData', 'PromptTopText', 'PromptTopLink'],
 		data() {
 			return {
 				PromptTopLink: "/PromptActiveLink",
