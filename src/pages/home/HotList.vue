@@ -101,8 +101,7 @@
 		width: 100%;
 	}
 	.index-hot-list-show-con-text-con{
-		float: left;
-		margin-left: .2rem;
+		margin-left: 1.6rem;
 	}
 	.index-hot-list-show-con-text-title{
     	margin-top: .04rem;
