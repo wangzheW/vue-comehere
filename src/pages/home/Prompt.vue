@@ -126,6 +126,12 @@
 	.index-prompt-bottom-img{
 		float: left;
 	}
+	.index-prompt-bottom-active-title, .index-prompt-bottom-active-value{
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+  	  	text-overflow: ellipsis;
+	}
 	.index-prompt-bottom-active-title{
 		margin-top: .2rem;
 	}
