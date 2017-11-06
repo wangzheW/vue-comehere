@@ -77,6 +77,9 @@ export default {
 		text-align: center;
 		color: #212121;
 		font-size: .28rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.icon-pagination{
 		bottom: .1rem;
