@@ -1,0 +1,2 @@
+export const SET_DATA = "DETAIL_SET_DATA";
+export const AXIOS_GET_DATA = "DETAIL_AXIOS_GET_DATA";
