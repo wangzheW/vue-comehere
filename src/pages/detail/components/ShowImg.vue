@@ -1,9 +1,9 @@
 <template>
 	<div class="detail-show">
-		<div class="detail-all-img" id="allImgCon">
+		<div class="detail-all-img" id="allImgCon" ref="abc">
 			<swiper :options="swiperOption">
 				<swiper-slide v-for="item in allImgInfo" :key="item.id">
-					<img :src="item.imgUrl" :alt="showImg.imgAlt" class="detail-swiper-img" @click="handleFade">
+					<img :src="item.imgUrl" :alt="showImg.imgAlt" class="detail-swiper-img">
 					<p class="detail-swiper-page">
 						<span class="detail-swiper-page-now">{{item.id}}</span>
 						/
@@ -51,14 +51,18 @@
 			swiperSlide
 		},
 
+		mounted() {
+			var allImgCon = document.getElementById("allImgCon");
+			allImgCon.addEventListener("click", this.handleHide.bind(this));
+		},
+
 		methods: {
 			handleShow(){
 				var allImgCon = document.getElementById("allImgCon");
 				allImgCon.style.display = "block";
 			},
-			handleFade(){
-				var allImgCon = document.getElementById("allImgCon");
-				allImgCon.style.display = "none";
+			handleHide(){
+				this.$refs.abc.style = "display=none"
 			}
 		}
 	}

@@ -35,5 +35,11 @@ export default {
 					console.log(err);
 				});
 		}
+	},
+
+	getters: {
+		moreInfo(state) {
+			return state.moreInfo;
+		}
 	}
 }

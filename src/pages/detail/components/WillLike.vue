@@ -30,8 +30,13 @@
 </template>
 
 <script>
+
+	import { mapGetters } from 'vuex'
+
 	export default{
-		props: ['moreInfo']
+
+		computed: mapGetters(['moreInfo'])
+
 	}
 </script>
 

@@ -82,6 +82,7 @@
 			"titleIcon": "iconfont icon-weibiaoti205",
 			"title": "故宫成人票",
 			"close": 3,
+			"show": 0,
 			"ticketValue": [{
 				"id": 1,
 				"title": "上午场",
@@ -97,12 +98,28 @@
 				"title": "故宫+珍宝馆+钟表馆",
 				"tip": "凭身份证入园",
 				"money": "60"
+			}],
+			"hideInfo": [{
+				"id": 1,
+				"title": "去哪直销",
+				"tip": "【上午场】故宫成人票凭身份证入园",
+				"iconOV": "可订明日",
+				"iconTV": "条件退",
+				"money": "40"
+			},{
+				"id": 2,
+				"title": "去哪直销",
+				"tip": "【免排队购票  刷身份证直接进入 】故宫学生票",
+				"iconOV": "可订明日",
+				"iconTV": "条件退",
+				"money": "40"
 			}]
 		},{
 			"id": 2,
 			"titleIcon": "iconfont icon-weibiaoti205",
 			"title": "故宫学生票",
 			"close": 3,
+			"show": 0,
 			"ticketValue": [{
 				"id": 1,
 				"title": "上午场",
@@ -118,6 +135,14 @@
 				"title": "故宫+珍宝馆+钟表馆",
 				"tip": "凭身份证入园",
 				"money": "30"
+			}],
+			"hideInfo": [{
+				"id": 1,
+				"title": "去哪直销",
+				"tip": "【上午场】故宫学生票凭身份证入园",
+				"iconOV": "可订明日",
+				"iconTV": "条件退",
+				"money": "40"
 			}]
 		},{
 			"id": 3,

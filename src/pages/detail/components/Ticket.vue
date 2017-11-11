@@ -16,11 +16,33 @@
 						<div class="tic-item-money">
 							￥<span class="tic-item-money-num">{{item.money}}</span>
 						</div>
-						<div class="tic-item-down">
+						<div class="tic-item-down" @click="handleShowHide($event)">
 							起<span class="iconfont tic-item-down-icon">&#xe647;</span>
 						</div>
 					</div>
 				</li>
+				<ul class="tic-hide-list">
+					<li class="tic-hide-item" v-for="item in conItem.hideInfo" :key="item.id">
+						<div class="tic-hide-text">
+							<span class="tic-hide-text-title">{{item.title}}</span>
+							<p class="tic-hide-text-tip">{{item.tip}}</p>
+							<ul>
+								<li class="tic-hide-tip-con">
+									<span class="iconfont icon-shijian tic-hide-text-icon"></span>{{item.iconOV}}
+								</li>
+								<li class="tic-hide-tip-con">
+									<span class="iconfont icon-duigou tic-hide-text-icon"></span>{{item.iconTV}}
+								</li>
+							</ul>
+						</div>
+						<div class="tic-hide-button">
+							<p class="tic-hide-money">
+								<span class="tic-hide-money-mark">￥</span>{{item.money}}
+							</p>
+							<div class="tic-hide-btn">预订</div>
+						</div>
+					</li>
+				</ul>
 			</ul>
 		</div>
 		<div class="tic-more-btn" @click="handleClick($event)" v-if="conItem.ticketValue.length > 2">
@@ -38,7 +60,7 @@
 
 		data() {
 			return {
-				num: 3,
+				num: 3
 			}
 		},
 
@@ -50,6 +72,10 @@
 					boxs[i].index = i;
 				}
 				this.ticketInfo[e.target.parentNode.index].close = 999;
+			},
+
+			handleShowHide(e){
+				//this.$store.dispatch
 			}
 		}
 
@@ -57,6 +83,78 @@
 </script>
 
 <style scoped>
+	.tic-hide-list{
+		display: none;
+		float: left;
+		width: 100%;
+		background: #f5f5f5;
+	}
+	.tic-hide-item{
+		padding: .25rem;
+	}
+	.tic-hide-text{
+		float: left;
+		width: 70%;
+	}
+	.tic-hide-text-title{
+		display: inline-block;
+		overflow: hidden;
+		line-height: .34rem;
+		max-width: 2.5rem;
+		padding: 0 .2rem;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		color: #666;
+	}
+	.tic-hide-text-tip{
+		color: #888;
+		font-size: .24rem;
+		line-height: .36rem;
+		padding-bottom: .08rem;
+	}
+	.tic-hide-tip-con{
+		float: left;
+		line-height: .32rem;
+		margin-right: .24rem;
+		color: #616161;
+		font-size: .24rem;
+		white-space: nowrap;
+	}
+	.tic-hide-text-icon{
+		display: inline-block;
+		margin-right: .08rem;
+		color: #1ba9ba;
+		font-size: .2rem;
+	}
+	.tic-hide-button{
+		box-sizing: border-box;
+		width: 30%;
+		padding-left: .2rem;
+		float: left;
+		text-align: center;
+	}
+	.tic-hide-money{
+		width: 100%;
+		height: .32rem;
+		line-height: .3rem;
+		color: #ff9800;
+	}
+	.tic-hide-money-mark{
+		display: inline-block;
+		margin-right: .04rem;
+		font-size: .24rem;
+		line-height: .28rem;
+	}
+	.tic-hide-btn{
+		height: .6rem;
+		background: #ff9800;
+		color: #fff;
+		font-size: .28rem;
+		line-height: .6rem;
+	}
+
+
+
 	.ticket-main{
 		width: 100%;
 		background: #fff;
@@ -121,6 +219,7 @@
 		font-size: .24rem;
 	}
 	.tic-more-btn{
+		overflow: hidden;
 		width: 100%;
 		height: .8rem;
 		line-height: .8rem;

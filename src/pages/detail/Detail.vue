@@ -7,10 +7,12 @@
 		<div class="detail-container-main">
 			<detail-recommend :recommendInfo="recommendInfo"/>
 			<detail-ticket :ticketInfo="ticketInfo"/>
+			<router-view :commentInfo="commentInfo"></router-view>
 			<detail-comment :commentInfo="commentInfo"/>
 		</div>
-		<detail-will-like :moreInfo="moreInfo"/>
+		<detail-will-like/>
 		<detail-back-home/>
+		<detail-fixed-top/>
 	</div>
 </template>
 
@@ -25,6 +27,7 @@
 	import comment from './components/Comment'
 	import willLike from './components/willLike'
 	import backHome from './components/BackHome'
+	import fixedTop from './components/FixedTop'
 	import { AXIOS_GET_DATA } from './types'
 	import { mapState, mapActions } from 'vuex'
 
@@ -39,7 +42,8 @@
 			'detail-ticket': ticket,
 			'detail-comment': comment,
 			'detail-will-like': willLike,
-			'detail-back-home': backHome
+			'detail-back-home': backHome,
+			'detail-fixed-top': fixedTop
 		},
 
 		computed: mapState({

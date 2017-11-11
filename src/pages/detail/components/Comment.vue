@@ -4,7 +4,7 @@
 			<span class="comment-title-line"></span>用户评论
 		</h2>
 		<div class="comment-border-line"></div>
-		<ul class="comment-item-con">
+		<ul class="comment-item-con" id="visitorValueCon">
 			<li class="comment-item" v-for="valItem in commentInfo" :key="valItem.id">
 				<h3 class="comment-item-title">
 					<span :class="valItem.star" class="comment-item-icon"></span>
@@ -14,65 +14,44 @@
 					</span>
 				</h3>
 				<p class="comment-visitor-value">{{valItem.value}}</p>
-				<div class="comment-vistor-img-con">
-					<span class="comment-vistor-img-all">共{{valItem.imgInfo.length}}张</span>
-					<img v-for="imgItem in valItem.imgInfo" v-if="imgItem.id < 7" :key="imgItem.id" :src="imgItem.imgUrl" class="comment-vistor-img"/>
+				<div class="comment-vistor-img-con" @click="handleShowImg">
+						<span class="comment-vistor-img-all">共{{valItem.imgInfo.length}}张</span>
+						<img v-for="imgItem in valItem.imgInfo" v-if="imgItem.id < 7" :key="imgItem.id" :src="imgItem.imgUrl" class="comment-vistor-img"/>
 				</div>
 			</li>
 		</ul>
 		<router-link to="/" class="comment-look-all-link">
 			查看全部评论<span class="iconfont icon-you"></span>
 		</router-link>
-		<!--<div class="comment-swipe">
-			<swiper :options="swiperOption" class="comment-slide-con">
-	    		<swiper-slide v-for="item in commentInfo[1].imgInfo" :key="item.id">
-	    			<img :src="item.imgUrl" alt="" class="swiper-img">
-	    		</swiper-slide>
-  			</swiper>
-		</div>-->
 	</div>
 </template>
 
 <script>
 
-	import {swiper, swiperSlide} from "vue-awesome-swiper";
-
 	export default {
 		props: ['commentInfo'],
 
-		components:{
-			swiper,
-			swiperSlide
-		},
+		methods: {
+			handleShowImg(e) {
+				var boxs = document.getElementById("visitorValueCon").children;
+				
+				for(let i = 0; i < boxs.length; i++){
+					boxs[i].index = i;
+				}
 
-		data() {
-			return {
-				swiperOption: {
-					direction: 'horizontal',
-					autoHeight: true,
-					observeParents: true
-      			}
+				this.$router.push({
+					path: "detail/visitorImg",
+					query: {
+						id: e.target.parentNode.parentNode.index
+					}
+				})
 			}
 		}
+
 	}
 </script>
 
 <style scoped>
-	.comment-swipe{
-		display: none;
-		position: absolute;
-		left: 0;
-		top: -10rem;
-		z-index: 10;
-		width: 100%;
-		height: 30rem;
-		background: #000;
-		opacity: .6;
-	}
-	.swiper-img{
-		width: 100%;
-		margin-top: 10rem;
-	}
 	.comment-main{
 		position: relative;
 		width: 100%;
