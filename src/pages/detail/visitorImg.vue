@@ -48,10 +48,8 @@
 
 		methods: {
 			handleSlideChange() {
-				console.log(1);
-				var that = this;
 				const mySwiper = new Swiper('.comment-slide-con',{
-					onTouchEnd: function(swiper,index){
+					onTouchEnd: (swiper,index) => {
 						/*var slides = document.getElementsByClassName("det-com-slide");
 						var activeSlide = document.getElementsByClassName("det-com-slide swiper-slide-active");
 						for(var i = 0; i < slides.length; i++){
@@ -65,10 +63,7 @@
 								}
 							}
 						}*/
-						console.log(index);
-						console.log(swiper);
-						console.log(swiper.activeIndex);
-						that.num = swiper.activeIndex;
+						this.num = swiper.activeIndex + 1;
 					}
 				});
 			},

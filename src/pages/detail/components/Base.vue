@@ -1,6 +1,6 @@
 <template>
 	<div class="detail-base-main">
-		<div class="detail-base-address">
+		<div class="detail-base-address" @click="handleClickLookMap">
 			<p class="detail-base-text">
 				<span class="iconfont detail-base-text-left">&#xe611;</span>
 				北京市东城区景山前街4号
@@ -17,7 +17,17 @@
 	</div>
 </template>
 
-<script></script>
+<script>
+	export default {
+		methods: {
+			handleClickLookMap() {
+				this.$router.push({
+					path: "/nowmap"
+				})
+			}
+		}
+	}
+</script>
 
 <style scoped>
 	.detail-base-main{
@@ -59,6 +69,6 @@
     	top: .04rem;
     	color: #b9b9b9;
     	font-size: .24rem;
-    	line-height: .28rem;
+    	line-height: .68rem;
 	}
 </style>
