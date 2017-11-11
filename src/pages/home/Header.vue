@@ -6,8 +6,10 @@
 				<span class="single-line">输入城市/景点/游玩主题</span>	
 			</router-link>		
 		</div>
-		<div class="header-right" >
-			<span class="header-city">北京</span>
+		<div class="header-right" @click="handleChangeCity">
+			<router-link to="/city">
+				<span class="header-city">{{$store.getters.getCity}}</span>
+			</router-link>
 		</div>
 	</header>
 </template>
@@ -17,7 +19,17 @@
 import "../../assets/font/iconfont.css";
 
 export default {
-	
+	data() {
+		return{
+
+		}
+	},
+	methods:{
+		handleChangeCity: function() {
+			//this.$store.dispatch("changeCity")
+			console.log(this.$store);
+		}
+	}
 }
 
 </script>
