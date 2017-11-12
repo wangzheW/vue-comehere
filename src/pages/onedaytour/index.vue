@@ -24,7 +24,7 @@ import ticketlist from './components/ticketlist/ticketlist'
 import bottomlist from './components/bottomlist/bottomlist'
 import spotlistscroll from './components/spotlistscroll/spotlistscroll'
 import pagenation from './components/pagenation/pagenation'
-import axios from 'axios'
+import "../../assets/font/iconfont.css";import axios from 'axios'
 	export default {
 		data() {
 			return ({			
@@ -67,6 +67,7 @@ import axios from 'axios'
 	}
 </script>
 <style scoped>
+
 	.oneday-header{
 		position: relative;
 	    overflow: hidden;
