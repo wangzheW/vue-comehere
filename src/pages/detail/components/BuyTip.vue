@@ -35,12 +35,13 @@
 	.detail-tip-main{
     	height: .88rem;
     	line-height: .88rem;
-    	padding-left: .23rem;color: #f1441a;
+    	color: #f1441a;
     	margin-bottom: .2rem;
     	background-color: #fdeede;
 	}
 	.detail-tip-con{
 		position: relative;
+		padding-left: .23rem;
 		overflow: hidden;
 		padding-right: .6rem;
     	white-space: nowrap;
@@ -59,11 +60,13 @@
 
 	.all-screen-tip{
 		display: none;
-		position: absolute;
+		position: fixed;
 		top: -2rem;
 		z-index: 10;
 		width: 100%;
-		height: 400%;
+		height: 150%;
+
+		overflow: hidden;
 		background: rgba(255,255,255,0.9);
 		text-align: center;
 	}
@@ -84,7 +87,7 @@
 		width: .3rem;
 		height: .3rem;
 		line-height: .32rem;
-		margin-top: 7.6rem;
+		margin-top: 5.6rem;
 		border-radius: 50%;
 		border: .02rem #333 solid;
 		color: #333;

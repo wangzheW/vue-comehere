@@ -60,17 +60,19 @@
 	}
 	.rec-ticket-con{
 		overflow: hidden;
+		width: 100%;
 		padding: .2rem .2rem .24rem .2rem;
 	}
 	.rec-ticket-text{
 		float: left;
+		width: 70%;
 		line-height: .36rem;
 		padding: .08rem 0;
     	color: #333;
     	font-size: .32rem;
 	}
 	.rec-ticket-title{
-		width: 5.28rem;
+		width: 100%;
     	line-height: .52rem;
     	margin-right: .1rem;
     	padding: 0;
@@ -96,6 +98,7 @@
 	}
 
 	.rec-ticket-money{
+		width: 30%;
 		float: right;
 	}
 	.rec-ticket-money-num{

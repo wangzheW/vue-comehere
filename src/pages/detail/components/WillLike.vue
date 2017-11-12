@@ -117,6 +117,7 @@
     	width: 1.4rem;
     	height: .28rem;
 		color: #00afc7;
+		font-size: .26rem;
 	}
 	.wl-comment-num{
 		margin-left: .1rem;

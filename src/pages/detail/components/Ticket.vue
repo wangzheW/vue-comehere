@@ -177,12 +177,13 @@
 	}
 	.tic-item{
 		overflow: hidden;
+		width: 100%;
 		margin-bottom: -.02rem;
     	padding: .24rem .2rem;
 	}
 	.tic-item-tip{
 		float: left;
-		width: 5.3rem;
+		width: 70%;
 		line-height: .32rem;
 		font-size: .24rem;
 		color: #888;
@@ -197,6 +198,7 @@
 	.tic-item-more{
 		overflow: hidden;
 		float: right;
+		width: 30%;
 		line-height: .64rem;
 	}
 	.tic-item-money{
