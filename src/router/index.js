@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Detail from '@/pages/detail/Detail'
 import VisitorImg from '@/pages/detail/VisitorImg'
 import NowMap from '@/components/NowMap'
 import AMap from 'vue-amap';
+import Home from '@/pages/home/Home'
+import Detail from '@/pages/detail/Detail'
+import List from '@/pages/list/index'
+import City from '@/pages/city/index'
 
 Vue.use(Router)
 Vue.use(AMap)
@@ -14,8 +17,11 @@ AMap.initAMapApiLoader({
 });
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
+      path: '/',
+      name: 'Home',
+      component: Home
+    },{
       path: '/detail',
       name: 'Detail',
       component: Detail,
@@ -27,6 +33,14 @@ export default new Router({
       path: '/nowmap',
       name: 'NowMap',
       component: NowMap
+    },{
+    	path:"/list",
+    	name: 'List',
+    	component: List
+    },{
+      path: '/city',
+      name: 'city',
+      component: City
     }
   ]
 })
