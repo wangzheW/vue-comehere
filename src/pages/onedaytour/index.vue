@@ -1,7 +1,7 @@
 <template>
 	<div class="oneday-page" ref="scrollchange">
 		<header class="oneday-header">
-			<span class="oneday-left iconfont">&#xe624;</span>
+			<span class="oneday-left iconfont" @click="handleReturn">&#xe624;</span>
 			<div class="oneday-title" >
 				<input type="text" class="oneday-search" v-model="value" placeholder="输入城市或景点">
 				<button class="oneday-remove"v-show="value" @click="handleDeletValue">×</button>
@@ -59,6 +59,9 @@ import "../../assets/font/iconfont.css";import axios from 'axios'
 					 .then((res) => {
 					 		this.getListInfo(res)
 					 	})
+			},
+			handleReturn() {
+				history.go(-1)
 			}
 		},
 		mounted() {						
