@@ -1,29 +1,25 @@
-<template>
-	
+<template>	
 	<header class="header">
-		<a class="header-left iconfont">&#xe6bc;</a>
+		<a class="header-left iconfont">&#xe624;</a>
 		<div class="header-title" >
-			<span class="single-line">输入城市/景点/游玩主题</span>			
+			<router-link to="/list">
+				<span class="single-line">输入城市/景点/游玩主题</span>	
+			</router-link>		
 		</div>
 		<div class="header-right" >
 			<span class="header-city">北京</span>
-			<span class="downarrow"></span>			
 		</div>
 	</header>
-
 </template>
 
 <script>
-import "../../assets/font/iconfont.css";
-//哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
-export default {
 
-	data () {
-	    return {
-	      msg: 'header'
-	    }
-	}
+import "../../assets/font/iconfont.css";
+
+export default {
+	
 }
+
 </script>
 
 <style scoped>
@@ -50,11 +46,21 @@ export default {
 	}
 	.header-title{
 	    position: relative;
-	    height: .6rem;
 	    margin: .14rem 1.32rem .14rem .8rem;
 	    background: #fff;
+	    height: .6rem;
 	    line-height: .6rem;
 	    border-radius: .06rem;
+	}
+	.header-input-iconfont-con{
+		float: left;
+		margin-left: .12rem;
+		width: .28rem;
+		height: .28rem;
+	}
+	.header-input-iconfont{
+	    color: #ccc;
+	    font-size: .38rem;
 	}
 	.header-right{
 		position: absolute;
@@ -78,21 +84,24 @@ export default {
 	    color: #ccc;
 	}
 	.header-city{
+		display:block;
+		overflow:hidden;
+		width: 1rem;
+        height: .88rem; 
 		line-height: 0.88rem;
-		padding: 0 .22rem;
 		color: #fff;
+        word-break:keep-all;
+        white-space:nowrap;
+        text-overflow:ellipsis;
 	}
-	.downarrow{
-		position: absolute;
-		top: 40%;
-		right: 0.08rem;
-		line-height: 0.88rem;
-		display: inline-block;
-	    width: 0;
-	    height: 0;
-	    border-left: 0.12rem solid transparent;
-	    border-right: 0.12rem solid transparent;
-	    border-top: 0.12rem solid #FFFFFF;
-	}
+	.header-city:after{
+		position: relative;
+		left: .04rem;
+  		top: .24rem;
+  		content: "";
+ 		border-left: .14rem solid transparent;  
+    	border-right: .14rem solid transparent;  
+   		border-top: .14rem solid #fff;       
+ 	}
 </style>
 

@@ -1,0 +1,89 @@
+<template>
+	<div>
+		<div class="promote-country-outer">
+		    <ul class="promote-flexbox">
+		    	<!-- <li class="promote-flexbox-layout"
+		    	:class="{'promote-country-actived':! active,'promote-country-unactived': active}"
+				@click="handleClickChange" >{{"国内场"}}
+		    	</li>
+		    	<li class="promote-flexbox-layout"
+		    	:class="{'promote-country-actived': active,'promote-country-unactived':! active}"
+				@click="handleClickChange" >{{"国外场"}}
+		    	</li> -->
+				<li class="promote-flexbox-layout" 
+				v-for="(item,index) in countryOuterInfo" 
+				@click="handleClickChange(item,index)" 
+				:class="{'promote-country-actived':item.active,'promote-country-unactived':!item.active}">{{item.choice}}
+				</li>
+	    	</ul>
+	    </div>
+	</div>
+</template>
+
+
+<script>
+	// import axios from 'axios'
+	import Vue from 'vue'
+	import { mapState } from 'vuex'
+	// import bus from '../../../vuex/eventBus.js'
+
+	export default {
+		data: () => {
+			return{
+				active: true
+			}
+		},
+		beforeMount() {
+			this.getPromoteData()
+		},
+		computed: mapState({
+			countryOuterInfo: (state) => {
+				// console.log(state)
+				return state.promote.countryOuterInfo;
+			}	
+		}),
+		methods: {
+			getPromoteData() {
+				// console.log(this.$store)
+				this.$store.dispatch("getCountryOuterData")
+			},
+			handleClickChange(item, index) {
+				// this.active = !this.active;
+				this.countryOuterInfo.forEach((value) => {
+					// value.active = false;
+　　　　　　　　　　	Vue.set(value,'active',false);
+　　　　　　　　　　});
+				// this.item.active = true;
+				Vue.set(item,'active',true);
+				this.$store.commit("CountryOrOuter", index)
+				// bus.$emit("changeCountry", index)
+			}
+		}
+	}
+</script>
+
+
+<style>
+	.promote-country-outer {
+	    height: .96rem;
+	}
+	.promote-flexbox {
+		display: flex;
+		width: 100%;
+	}
+	.promote-flexbox-layout {
+	    width: 50%;
+	    font-size: .32rem;
+	    line-height: .96rem;
+	    text-align: center;
+    	color: #fff;
+	}
+	.promote-country-unactived{
+		background-color: #86b0ff;
+	}
+	.promote-country-actived {
+		background-color: #4482f6;
+	}
+
+	
+</style>
