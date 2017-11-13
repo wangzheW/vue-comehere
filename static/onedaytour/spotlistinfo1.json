@@ -1,0 +1,106 @@
+{
+	"ret": true,
+	"data": {
+			"spotitemlist": [{
+				"imgUrl":"//img1.qunarzz.com/p/tts2/1707/43/8250a273d1946502.jpg_110x110_532f0563.jpg",
+				"bookingflag": true,
+				"producttitle": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 861,
+				"price" : 208,
+				"id":0
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts1/1605/35/f267ae654a8511f7.jpg_110x110_33358754.jpg",
+				"bookingflag": true,
+				"producttitle": "【休闲纯玩半日游】恭王府.含大戏楼+什刹海+黄包车半日游",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 215,
+				"price" : 90,
+				"id":1
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts3/1708/e0/9072ffc0ef322302.jpg_110x110_52fb9421.jpg",
+				"bookingflag": false,
+				"producttitle": "【7-12点天天发】八达岭长城+往返直通车+门票，自由可选！",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 7521,
+				"price" : 45,
+				"id":2
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts0/1707/e3/d77d245a07ca4102.jpg_110x110_b3252ca4.jpg",
+				"bookingflag": true,
+				"producttitle": "【爆款】北京八达岭长城+十三陵定陵含地宫鸟巢纯玩一日游",
+				"zero": true,
+				"costself":true,
+				"shopping":false,
+				"volume": 3741,
+				"price" : 118,
+				"id":3
+				},{
+				"imgUrl":"//img1.qunarzz.com/p/tts2/1707/43/8250a273d1946502.jpg_110x110_532f0563.jpg",
+				"bookingflag": true,
+				"producttitle": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游",
+				"zero": true,
+				"costself":false,
+				"shopping":true,
+				"volume": 861,
+				"price" : 208,
+				"id":4
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts1/1605/35/f267ae654a8511f7.jpg_110x110_33358754.jpg",
+				"bookingflag": false,
+				"producttitle": "【休闲纯玩半日游】恭王府.含大戏楼+什刹海+黄包车半日游",
+				"zero": true,
+				"costself":false,
+				"shopping":true,
+				"volume": 215,
+				"price" : 90,
+				"id":5
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts3/1708/e0/9072ffc0ef322302.jpg_110x110_52fb9421.jpg",
+				"bookingflag": true,
+				"producttitle": "【7-12点天天发】八达岭长城+往返直通车+门票，自由可选！",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 7521,
+				"price" : 45,
+				"id":6
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts0/1707/e3/d77d245a07ca4102.jpg_110x110_b3252ca4.jpg",
+				"bookingflag": true,
+				"producttitle": "【爆款】北京八达岭长城+十三陵定陵含地宫鸟巢纯玩一日游",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 3741,
+				"price" : 118,
+				"id":7
+				},{
+				"imgUrl":"//img1.qunarzz.com/p/tts2/1707/43/8250a273d1946502.jpg_110x110_532f0563.jpg",
+				"bookingflag": true,
+				"producttitle": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游",
+				"zero": true,
+				"costself":true,
+				"shopping":false,
+				"volume": 861,
+				"price" : 208,
+				"id":8
+				},{
+				"imgUrl":"http://img1.qunarzz.com/p/tts1/1605/35/f267ae654a8511f7.jpg_110x110_33358754.jpg",
+				"bookingflag": false,
+				"producttitle": "【休闲纯玩半日游】恭王府.含大戏楼+什刹海+黄包车半日游",
+				"zero": true,
+				"costself":true,
+				"shopping":true,
+				"volume": 215,
+				"price" : 90,
+				"id":9
+				}]
+	}
+}

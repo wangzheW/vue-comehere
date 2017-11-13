@@ -27,7 +27,7 @@
 <script>
 	
 	
-	import '../../assets/comments-font/iconfont.css';
+	import '../../assets/font/iconfont.css';
 	import header from './components/header.vue'
 	import satisfied from './components/satisfied'
 	import detailGroup from './components/detailGroup'
@@ -52,8 +52,7 @@
 							show: false,
 							yscroll:0,
 							a: 0
-							// b: false,
-							// c: false
+							
 						})
 		},
 
@@ -73,21 +72,19 @@
 		
 		computed:mapState({
 			headerCon: (state) => {
+				console.log(state.oneDayDetail)
 				return state.oneDayDetail.headerCon
 			},
 			schedulingCon: (state) => {
 				return state.oneDayDetail.schedulingCon
 			}
 		}),
-
-
-		
 		mounted() {
 			!this.headerCon.length && this.getHomeData();
 			!this.schedulingCon.length && this.getHomeData();
 
 			
-			var that = this;
+				var that = this;
 				//console.log(this.$refs.blueBlock.style)
 				window.onscroll = function() {
 				console.log(this.scrollY);
@@ -102,11 +99,9 @@
 						if (c == 380){
 							that.show = true
 						}else if(c < 380){
-							that.show = false
+							that.show = false 
 						}
 						
-
-
 					if(this.scrollY < 1400) {
 						that.a = 0
 					}else if(this.scrollY > 1400 && this.scrollY < 1800 ) {
@@ -116,13 +111,7 @@
 					}
 					//console.log(that.scrollY)
 					// console.log(that.a)
-					// console.log(that.b)
-					// console.log(that.c)
-			}
-			
-			
-
-
+			}	
 		},
 		methods: {
 				changeScroll:function(index) {
@@ -142,12 +131,9 @@
 					getHomeData: (dispatch) => {
 						dispatch(AJAX_GET_DATA)
 					}
-					
 				})
-}
-
-	
-	}
+			}
+		}
 </script>
 
 <style scoped>
