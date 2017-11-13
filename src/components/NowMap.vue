@@ -8,6 +8,7 @@
 
 <script>
 	export default {
+	
 		methods: {
 			handleBackPrev() {
 				history.go(-1)
