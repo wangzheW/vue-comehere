@@ -12,8 +12,7 @@ export default {
 
 <style>
 	@import './reset.css';
-	@import '../../node_modules/swiper/dist/css/swiper.css';	
-	html{
-		background: #eee;
-	} 
+	@import './border.css';
+	@import '../../node_modules/swiper/dist/css/swiper.css'
+
 </style>

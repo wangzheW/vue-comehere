@@ -1,0 +1,67 @@
+{
+	"ret": true,
+	"data": {
+		"headerCon": 
+		{
+		"imgUrl": "https://imgs.qunarzz.com/p/tts2/1707/43/8250a273d1946502.jpg_640x360_5df82a05.jpg",
+		"starting": "出发地:北京",
+		"travel": "北京旭冉之旅",		
+		"title": "[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游",
+		"price": "208",
+		"saleNum": "902",
+		"condition":[{
+					"id": 0,
+					"con": "条件退"
+				},{
+					"id": 1,
+					"con": "铁定成团"
+				},{
+					"id": 2,
+					"con": "无自费"
+				},{
+					"id": 3,
+					"con": "无购物"
+				}]
+		},
+		"schedulingCon":[{
+				"id":0,
+				"date": "07:30",
+				"fontName": "icon-location",
+				"CollectionPlace": "集合地点",
+				"TripCon": "北京市东城区人民英雄纪念碑(天安门广场人民英雄纪念碑的北侧（导游举橘红色“旭冉假期”导游旗）集合)"
+				},{
+				"id":1,
+				"date": "08:30",
+				"fontName": "icon-06",
+				"CollectionPlace": "故宫博物院",
+				"TripCon": "前往【故宫博物院】，赠送游览珍宝馆。（游览时间：约2.5小时）配备每人一台无线耳麦，让您能在100米内清晰聆听到导游的讲解，请妥善保管，游览完毕后归还到导游处"				
+				},{
+				"id":2,
+				"date": "11:30",
+				"fontName": "icon-canju",
+				"CollectionPlace": "庆丰包子铺",
+				"TripCon": "庆丰包子铺享用庆丰包子，每人三两、9个包子，一碗粥（用餐时间：约1小时）"
+				},{
+				"id":3,
+				"date": "12:30",
+				"fontName": "icon-06",
+				"CollectionPlace": "八达岭长城",
+				"TripCon": "乘车赴【八达岭长城】（行程距离：约70公里；行驶时间：约2小时；游览时间：约2小时）"
+				},{
+				"id":4,
+				"date": "16:30",
+				"fontName": "icon-06",
+				"CollectionPlace": "鸟巢、水立方",
+				"TripCon": "前往【鸟巢、水立方】外观，自由活动和散团"
+				},{
+				"id":5,
+				"date": "16:30",
+				"fontName": "icon-shijian",
+				"CollectionPlace": "返程",
+				"TripCon": "行程结束后将您送回【鸟巢·水立方】自由活动和散团"
+				}]
+
+		
+	}
+
+}
