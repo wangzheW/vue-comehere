@@ -40,6 +40,9 @@
 			this.myScroll.refresh()
 			this.handleScroll()
 		},
+		beforeDestroy(){
+			window.removeEventListener("scroll",this.handleScroll)
+		},
 		methods: {
 			handleScroll () {
 				var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
