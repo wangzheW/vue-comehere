@@ -16,7 +16,7 @@ export default {
 			state.hotCity = payload[state.index].hotCity
 		},
 		CountryOrOuter(state, payload) {
-			console.log(state.countryOuterInfo[payload].hotCity[0].subject)
+			// console.log(state.countryOuterInfo[payload].hotCity[0].subject)
 			state.subject = state.countryOuterInfo[payload].hotCity[0].subject
 			state.index = payload
 			state.hotCity = state.countryOuterInfo[payload].hotCity

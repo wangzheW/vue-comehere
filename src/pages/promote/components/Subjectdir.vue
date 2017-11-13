@@ -38,11 +38,13 @@
 			// console.log(this.subjectInfo)
 
 			this.myScroll.refresh()
+			this.handleScroll()
 		},
 		methods: {
 			handleScroll () {
 				var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 				var offsetTop = this.$refs.ceiling.offsetTop;
+				// console.log(this.$refs.ceiling.offsetTop)
 				if(scrollTop > offsetTop) {
 					this.sdf = true;
 				} else {

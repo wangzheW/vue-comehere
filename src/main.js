@@ -3,15 +3,18 @@ import App from './app/App'
 import router from './router'
 import store from './vuex'
 import FastClick from 'fastclick'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 import VueResource from 'vue-resource'
 
 FastClick.attach(document.body);
 
 Vue.config.productionTip = false
 
-Vue.use(VueAwesomeSwiper)
+
 Vue.use(VueResource)
+
+
+window.bus = new Vue();
 
 new Vue({
   el: '#app',
@@ -20,3 +23,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+
