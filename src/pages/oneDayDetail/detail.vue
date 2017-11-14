@@ -84,12 +84,16 @@
 			!this.schedulingCon.length && this.getHomeData();
 
 			
-				var that = this;
 				
-				window.onscroll = function() {
 				
-
-
+				window.addEventListener('scroll',this.handleScroll)	
+			},
+			beforeDestroy(){
+				window.removeEventListener("scroll",this.handleScroll)
+			},
+			methods: {
+				handleScroll:function() {
+					var that = this;
 					var b = this.scrollY>300?300:this.scrollY;
 					var s =  b/300;
 					//console.log(window.scrollY)
@@ -109,9 +113,7 @@
 					}else if(this.scrollY > 1800) {
 						that.a = 2
 					}
-				}	
-			},
-		methods: {
+				},
 				changeScroll:function(index) {
 						
 						var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
