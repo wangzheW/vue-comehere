@@ -2,7 +2,7 @@
 		<div class="ticketCon">
 			<ul class="ticket-list">
 				<li class="ticket-list-item" v-for="item in spotitemlist" :key="item.id">
-					<router-link to="/oneDayDetail">
+					<router-link to="/oneDayDetail" class="routedetail">
 					<div class="ticket-list-imgcon">
 						<img class="ticket-list-img" v-lazy="item.imgUrl" alt="">
 						<span class="ticket-list-bookingflag" v-if="item.bookingflag">
@@ -38,6 +38,10 @@
 			min-height: 15rem;
 		}
 	.ticket-list-item{
+		/*display: flex;*/
+		width: 100%;
+	}
+	.routedetail{
 		display: flex;
 		width: 100%;
 	}

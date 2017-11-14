@@ -1,7 +1,7 @@
 <template>
 	<div class="contain" ref="cont">
 		<div class="detail-header" ref="blueBlock">
-			<span class="back iconfont icon-fanhui"></span>
+			<span class="back iconfont icon-fanhui"@click="handleBack"></span>
 			<h1 class="detail-header-title">
 				[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游
 			</h1>
@@ -85,9 +85,9 @@
 
 			
 				var that = this;
-				//console.log(this.$refs.blueBlock.style)
+				
 				window.onscroll = function() {
-				console.log(this.scrollY);
+				
 
 
 					var b = this.scrollY>300?300:this.scrollY;
@@ -109,24 +109,25 @@
 					}else if(this.scrollY > 1800) {
 						that.a = 2
 					}
-					//console.log(that.scrollY)
-					// console.log(that.a)
-			}	
-		},
+				}	
+			},
 		methods: {
 				changeScroll:function(index) {
-						//console.log(index)
 						
-						var scrollTop = window.scrollTop|| document.documentElement.scrollTop||document.body.scrollTop;
-						if (index == 1) {
-							window.scrollTop =1400+"px" ;
-						}else if(index == 2){
-							window.scrollTop = 1800+"px";
+						var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+						
+						if (index == 0) {
+							
+							document.documentElement.scrollTop = 600 ;
+						}else if(index == 1){
+							document.documentElement.scrollTop = 1600 ;
 						}else{
-							window.scrollTop =  2000+"px";
+							document.documentElement.scrollTop =  2000 ;
 
 						}
-						console.log(scrollTop)
+					},
+					handleBack() {
+						history.go(-1)
 					},...mapActions({
 					getHomeData: (dispatch) => {
 						dispatch(AJAX_GET_DATA)
