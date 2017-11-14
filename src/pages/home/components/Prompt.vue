@@ -52,7 +52,7 @@
 					imgUrl: imgLeft
 				},{
 					id: 2,
-					link: "/PromptActiveLink/2",
+					link: "/promote",
 					activeTitle: "金秋大促",
 					activeValue: "门票1元起",
 					imgUrl: imgRight

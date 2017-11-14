@@ -1,0 +1,160 @@
+{
+	"ret":true,
+	"data":{
+		"index": 0,
+		"domesticOrForeign":[
+			{	
+				"cityIndex": 0,
+				"choice": "国内场",
+				"hotCity": 
+				[{
+					"hotCity": "北京",
+					"subject": 
+						[{
+							"subject": "一元秒杀"
+						},{
+							"subject": "人文古迹"
+						},{
+							"subject": "自然风光"
+						},{
+							"subject": "主题乐园"
+						},{
+							"subject": "一日游"
+						}]
+				},{
+					"hotCity": "上海",
+					"subject": 
+						[{
+							"subject": "人文古迹"
+						},{
+							"subject": "自然风光"
+						},{
+							"subject": "主题乐园"
+						},{
+							"subject": "一日游"
+						}]
+				},{
+					"hotCity": "广州",
+					"subject": 
+						[{
+							"subject": "人文古迹"
+						},{
+							"subject": "自然风光"
+						},{
+							"subject": "主题乐园"
+						},{
+							"subject": "一日游"
+						}]
+				},{
+					"hotCity": "深圳",
+					"subject": 
+						[{
+							"subject": "人文古迹"
+						},{
+							"subject": "自然风光"
+						},{
+							"subject": "主题乐园"
+						},{
+							"subject": "一日游"
+						}]
+				},{
+					"hotCity": "苏州",
+					"subject": 
+						[{
+							"subject": "人文古迹"
+						},{
+							"subject": "自然风光"
+						},{
+							"subject": "主题乐园"
+						},{
+							"subject": "一日游"
+						}]
+				}],
+				"listCity": [{
+						"A": [{
+							"letter": "A"
+						},{
+							"cityName": "阿拉善盟"
+						},{
+							"cityName": "安康"
+						},{
+							"cityName": "阿里"
+						}],
+						"B": [{
+							"letter": "B"
+						},{
+							"cityName": "北京"
+						},{
+							"cityName": "保定"
+						},{
+							"cityName": "北海"
+						}],
+						"C": [{
+							"letter": "C"
+						},{
+							"cityName": "沧州"
+						},{
+							"cityName": "长沙"
+						},{
+							"cityName": "重庆"
+						}]
+				}]
+			},{
+
+				"choice": "海外场",
+				"hotCity": [{
+					"hotCity": "新加坡",
+					"subject": [{
+						"subject": "人文古迹"
+					},{
+						"subject": "自然风光"
+					},{
+						"subject": "主题乐园"
+					},{
+						"subject": "一日游"
+					}]
+				},{
+					"hotCity": "东京",
+					"subject": [{
+						"subject": "一元秒杀"
+					},{
+						"subject": "人文古迹"
+					},{
+						"subject": "自然风光"
+					},{
+						"subject": "主题乐园"
+					},{
+						"subject": "一日游"
+					}]
+				},{
+					"hotCity": "普吉岛",
+					"subject": [{
+						"subject": "人文古迹"
+					},{
+						"subject": "自然风光"
+					},{
+						"subject": "主题乐园"
+					},{
+						"subject": "一日游"
+					}]
+				}],
+					"commonCity": [{
+					"A": [{
+						"letter": "A"
+					},{
+						"cityName": "澳门"
+					},{
+						"cityName": "奥克兰"
+					}],
+					"B": [{
+						"letter": "B"
+					},{
+						"cityName": "巴黎"
+					},{
+						"cityName": "布拉格"
+					}]
+				}]
+			}
+		]
+	}
+}

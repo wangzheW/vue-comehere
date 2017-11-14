@@ -79,30 +79,31 @@ import Bscroll from 'better-scroll'
 				scrollY:true,				
 				bounceTime:200
 			})
-			window.onscroll = this.handleScroll.bind(this);			  
+			// window.onscroll = this.handleScroll;
+			window.addEventListener('scroll', this.handleScroll);		  
 		},
 		updated() {
 			this.scroll.refresh();
 			this.scrollright.refresh();
 		},
+		beforeDestroy(){
+		 	 window.removeEventListener("scroll",this.handleScroll)
+		},
+
 		methods: {
 			handleScroll() {
-				if(window.scrollY > this.sign) {
-			   		this.sign = window.scrollY;
+				var scrollTop = window.pageYOffset;
+				if(scrollTop > this.sign) {
+			   		this.sign = scrollTop;
 			   		if(this.color){
 			   			this.see = true;
 			   		}else{
 			   		this.see = false;
 			   		}
-			   		// console.log(123)
 			   	}
-			   	if(window.scrollY < this.sign){
-			   		this.sign = window.scrollY;
-			   		// if(this.color){
+			   	if(scrollTop < this.sign){
+			   		this.sign = scrollTop;
 			   			this.see = true;
-			   		// }else{
-			   			this.see = true;
-			   		// }
 			   	}
 			},
 			handleListColorChange(id) {				
@@ -120,17 +121,13 @@ import Bscroll from 'better-scroll'
 				this.active = index;
 				this.title = title;
 				this.num = num;
-				// console.log(index)
 				if(index == 0) {
 					return ""
 				}
-				// console.log(this.itemrightlist);
 				this.list = this.itemrightlist[index-1].spotname;
 
 			},
 			handleSelectType(num) {
-				// console.log(num)
-				// this.see = false;
 				this.color = false;
 			}
 		}
