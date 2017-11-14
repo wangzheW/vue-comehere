@@ -21,7 +21,6 @@
 <script>
 	import { mapState } from 'vuex'
 	import Vue from 'vue'
-	// import bus from '../../../vuex/eventBus.js'
 
 	export default {
 		data() {
@@ -31,17 +30,9 @@
 		methods: {
 			clickCityItem(cityItem, index) {
 				this.cityInfo.forEach((value, index) => {
-					// this_.active = false;
 　　　　　　　　　　	Vue.set(value,'active',false)
-					// value.active = false
-					// console.log(this.active)
 				})
 　　　　　　　　　	Vue.set(cityItem,'active',true)
-				// cityItem.active = true
-				// console.log(this.active)
-				// this.active = true
-				// console.log(this.$store.getters.getCountry)
-				// console.log(this.$store.commit)
 				this.commitCityIndex(index)
 
 			},
@@ -49,14 +40,6 @@
 				this.$store.commit("changeCityIndex", index)
 			}
 		},
-		// mounted() {
-		// 	bus.$on("changeCountry", function(res) {
-		// 		// this.cityInfo = res
-		// 		console.log(res)
-		// 	})
-		// },
-
-		
 		computed: mapState({
 			cityInfo: (state) => {
 				return state.promote.hotCity

@@ -30,7 +30,11 @@
 					title.style.opacity = 1;
 				}
 			}
+		},
+		beforeDestroy(){
+			window.removeEventListener("scroll",this.handleScroll)
 		}
+
 	}
 </script>
 

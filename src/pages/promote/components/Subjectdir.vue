@@ -34,9 +34,6 @@
 			window.addEventListener('scroll', this.handleScroll)
 		},
 		updated() {
-			
-			// console.log(this.subjectInfo)
-
 			this.myScroll.refresh()
 			this.handleScroll()
 		},
@@ -47,24 +44,17 @@
 			handleScroll () {
 				var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 				var offsetTop = this.$refs.ceiling.offsetTop;
-				// console.log(this.$refs.ceiling.offsetTop)
 				if(scrollTop > offsetTop) {
 					this.sdf = true;
 				} else {
 				    this.sdf = false;
 				}
-			},
-			changeCityIndex() {
-
 			}
-			// aaa:function() {
-			// 	return []
-			// }
+			
 		},
 		computed:mapState({
 			getSubject:function(state){
 				return state.promote.subject
-				// console.log(state.promote.subject)
 			}
 		})
 	}

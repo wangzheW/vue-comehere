@@ -2,14 +2,6 @@
 	<div>
 		<div class="promote-country-outer">
 		    <ul class="promote-flexbox">
-		    	<!-- <li class="promote-flexbox-layout"
-		    	:class="{'promote-country-actived':! active,'promote-country-unactived': active}"
-				@click="handleClickChange" >{{"国内场"}}
-		    	</li>
-		    	<li class="promote-flexbox-layout"
-		    	:class="{'promote-country-actived': active,'promote-country-unactived':! active}"
-				@click="handleClickChange" >{{"国外场"}}
-		    	</li> -->
 				<li class="promote-flexbox-layout" 
 				v-for="(item,index) in countryOuterInfo" 
 				@click="handleClickChange(item,index)" 
@@ -22,10 +14,8 @@
 
 
 <script>
-	// import axios from 'axios'
 	import Vue from 'vue'
 	import { mapState } from 'vuex'
-	// import bus from '../../../vuex/eventBus.js'
 
 	export default {
 		data: () => {
@@ -38,25 +28,19 @@
 		},
 		computed: mapState({
 			countryOuterInfo: (state) => {
-				// console.log(state)
 				return state.promote.countryOuterInfo;
 			}	
 		}),
 		methods: {
 			getPromoteData() {
-				// console.log(this.$store)
 				this.$store.dispatch("getCountryOuterData")
 			},
-			handleClickChange(item, index) {
-				// this.active = !this.active;
+			handleClickChange(item, index) {			
 				this.countryOuterInfo.forEach((value) => {
-					// value.active = false;
-　　　　　　　　　　	Vue.set(value,'active',false);
-　　　　　　　　　　});
-				// this.item.active = true;
+　　　　　　　　Vue.set(value,'active',false);
+　　　　　　});
 				Vue.set(item,'active',true);
 				this.$store.commit("CountryOrOuter", index)
-				// bus.$emit("changeCountry", index)
 			}
 		}
 	}

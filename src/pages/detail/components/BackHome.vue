@@ -22,6 +22,9 @@
     				btn.style.display = "block";
     			}
 			}
+		},
+		beforeDestroy(){
+			window.removeEventListener("scroll",this.menu)
 		}
 	}
 </script>
