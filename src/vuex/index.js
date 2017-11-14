@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import oneDayDetail from '../pages/oneDayDetail/module'
-=======
-
->>>>>>> origin/master
 import Vue from 'vue'
 import Vuex from 'vuex'
 import detail from '../pages/detail/module'
 import home from '../pages/home/module'
 import promote from '../pages/promote/module.js'
-
+import oneDayDetail from '../pages/oneDayDetail/module'
 
 
 Vue.use(Vuex);
@@ -17,11 +12,8 @@ export default new Vuex.Store({
 	modules:{
 		home: home,
 		detail: detail,
-<<<<<<< HEAD
-		oneDayDetail: oneDayDetail
-=======
+		oneDayDetail: oneDayDetail,
 		promote: promote
->>>>>>> origin/master
 	},
 	state: {
 		defaultCity: "北京"

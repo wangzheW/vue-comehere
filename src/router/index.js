@@ -6,11 +6,8 @@ import AMap from 'vue-amap';
 import Home from '@/pages/home/Home'
 import Detail from '@/pages/detail/Detail'
 import List from '@/pages/list/index'
-<<<<<<< HEAD
 import OneDayDetail from '@/pages/oneDayDetail/detail'
-=======
 import Promote from '@/pages/promote/Index'
->>>>>>> origin/master
 import City from '@/pages/city/index'
 import Onedaytour from '@/pages/onedaytour/index'
 import VueLazyload from 'vue-lazyload'
@@ -47,17 +44,13 @@ export default new Router({
     	name: 'List',
     	component: List
     },{
-<<<<<<< HEAD
-
       path:"/oneDayDetail",
       name: 'oneDayDetail',
       component: OneDayDetail
-     
-=======
+    },{
       path:"/promote",
       name:'Promote',
       component: Promote
->>>>>>> origin/master
     },{
       path:"/onedaytour",
       name: 'onedaytour',

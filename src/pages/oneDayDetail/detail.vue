@@ -1,7 +1,7 @@
 <template>
 	<div class="contain" ref="cont">
 		<div class="detail-header" ref="blueBlock">
-			<span class="back iconfont icon-fanhui"@click="handleBack"></span>
+			<span class="back iconfont icon-fanhui" @click="handleBack"></span>
 			<h1 class="detail-header-title">
 				[北京出发]天安门＋故宫【赠送珍宝馆】＋八达岭长城＋鸟巢·水立方一日游
 			</h1>
