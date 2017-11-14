@@ -2,6 +2,7 @@
 		<div class="ticketCon">
 			<ul class="ticket-list">
 				<li class="ticket-list-item" v-for="item in spotitemlist" :key="item.id">
+					<router-link to="/oneDayDetail">
 					<div class="ticket-list-imgcon">
 						<img class="ticket-list-img" v-lazy="item.imgUrl" alt="">
 						<span class="ticket-list-bookingflag" v-if="item.bookingflag">
@@ -22,6 +23,7 @@
 							<span class="mp-list-text border-left">已售{{item.volume}}</span>
 						</div>
 					</div>
+					</router-link>
 				</li>
 			</ul>
 		</div>
