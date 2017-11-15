@@ -24,8 +24,7 @@
         data() {
             return {
                 swiperOption: {
-                    loop: true,
-                    autoplay: 2000,
+                    autoplay: 3000,
                     direction: 'horizontal',//vertical
                     autoHeight: true,
                     pagination: '.home-swiper-pagination',

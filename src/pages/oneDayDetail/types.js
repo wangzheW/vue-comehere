@@ -1,0 +1,3 @@
+export const SET_HDATA = "ONEDAY_SET_HDATA";
+export const SET_SDATA ="ONEDAY_SET_SDATA";
+export const AJAX_GET_DATA = "ONEDAY_AJAX_GET_DATA"

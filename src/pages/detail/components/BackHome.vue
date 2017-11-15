@@ -14,6 +14,7 @@
 		methods: {
 			menu() {
 				this.scroll = document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop;
+    			//console.log(this.scroll)
     			var btn = document.getElementById("detBackHome")
     			if(this.scroll > 0){
     				btn.style.display = "none";

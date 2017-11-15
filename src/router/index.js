@@ -6,6 +6,7 @@ import AMap from 'vue-amap';
 import Home from '@/pages/home/Home'
 import Detail from '@/pages/detail/Detail'
 import List from '@/pages/list/index'
+import OneDayDetail from '@/pages/oneDayDetail/detail'
 import Promote from '@/pages/promote/Index'
 import City from '@/pages/city/index'
 import Onedaytour from '@/pages/onedaytour/index'
@@ -43,6 +44,10 @@ export default new Router({
     	name: 'List',
     	component: List
     },{
+      path:"/oneDayDetail",
+      name: 'oneDayDetail',
+      component: OneDayDetail
+    },{
       path:"/promote",
       name:'Promote',
       component: Promote
@@ -50,10 +55,12 @@ export default new Router({
       path:"/onedaytour",
       name: 'onedaytour',
       component: Onedaytour
+
     },{
       path: '/city',
       name: 'city',
       component: City
+
     }
   ]
 })

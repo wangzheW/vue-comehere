@@ -1,9 +1,9 @@
-
 import Vue from 'vue'
 import Vuex from 'vuex'
 import detail from '../pages/detail/module'
 import home from '../pages/home/module'
 import promote from '../pages/promote/module.js'
+import oneDayDetail from '../pages/oneDayDetail/module'
 
 
 Vue.use(Vuex);
@@ -12,6 +12,7 @@ export default new Vuex.Store({
 	modules:{
 		home: home,
 		detail: detail,
+		oneDayDetail: oneDayDetail,
 		promote: promote
 	},
 	state: {
@@ -35,4 +36,5 @@ export default new Vuex.Store({
 
 		}
 	}
+
 })

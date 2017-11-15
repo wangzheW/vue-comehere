@@ -14,4 +14,5 @@ export default {
 	@import './reset.css';
 	@import './border.css';
 	@import '../../node_modules/swiper/dist/css/swiper.css'
+
 </style>
