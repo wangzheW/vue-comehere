@@ -93,6 +93,8 @@
 	    font-size: .28rem;
 	    line-height: .4rem;
 	    text-align: center;
+	    flex: 1;
+
 	}
 	.detail-tab-active{
         border-bottom: .04rem solid #00afc7;

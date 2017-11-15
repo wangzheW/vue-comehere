@@ -150,6 +150,8 @@
 		z-index: 10;
 	}	
 	.detail-group{
+		display: flex;
+		width: 100%;
 		min-height: .6rem;
 		margin-top: .2rem;
 	    padding: .01rem 0;
