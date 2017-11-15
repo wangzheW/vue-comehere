@@ -94,24 +94,27 @@
 			methods: {
 				handleScroll:function() {
 					var that = this;
-					var b = this.scrollY>300?300:this.scrollY;
+					
+					var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+					// console.log(scrollTop)
+					var b = scrollTop>300?300:scrollTop;
 					var s =  b/300;
-					//console.log(window.scrollY)
-					that.yscroll = window.scrollY;
-					that.$refs.blueBlock.style.opacity = s;
-					var c = this.scrollY>380?380:this.scrollY;
-						if (c == 380){
+					// that.yscroll = window.scrollY;
+					this.$refs.blueBlock.style.opacity = s;
+					var c = scrollTop;
+						if (c > 380){
+							console.log(123123)
 							that.show = true
 						}else if(c < 380){
 							that.show = false 
 						}
 						
-					if(this.scrollY < 1400) {
-						that.a = 0
-					}else if(this.scrollY > 1400 && this.scrollY < 1800 ) {
-						that.a = 1
-					}else if(this.scrollY > 1800) {
-						that.a = 2
+					if(scrollTop < 1400) {
+						this.a = 0
+					}else if(scrollTop > 1400 && scrollTop < 1800 ) {
+						this.a = 1
+					}else if(scrollTop > 1800) {
+						this.a = 2
 					}
 				},
 				changeScroll:function(index) {
